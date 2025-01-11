@@ -23,3 +23,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.categories {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
