@@ -37,7 +37,8 @@ Supplement.init({
   description: DataTypes.STRING,
 }, { sequelize, modelName: "supplement" });
 
-sequelize.sync({force: true}).then(async () => {
+// pass {force: true} to drop and recreate the table
+sequelize.sync().then(async () => {
   const count = await Supplement.count();
   if (count === 0) {
     await Supplement.bulkCreate([
