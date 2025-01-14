@@ -8,7 +8,7 @@ Pillhub is a web app that helps you find the best supplements for your needs.
 - Express
 - TypeScript
 - SQLite
-- Sequelize
+- Sequelize // plan to remove and use SQLite directly or use Knex for a more lightweight solution
 - Axios
 
 ## Architecture
@@ -16,7 +16,6 @@ Pillhub is a web app that helps you find the best supplements for your needs.
 - Client: Preact
 - Server: Express
 - Database: SQLite
-- ORM: Sequelize
 - API: Axios
 
 ## Development
