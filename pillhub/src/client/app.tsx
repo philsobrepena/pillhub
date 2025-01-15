@@ -57,7 +57,7 @@ export function App() {
   const [supplements, setSupplements] = useState<Supplement[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string[]>([])
   const getSupplements = () => {
-    axios.get('http://localhost:3000/supplements')
+    axios.get(`${import.meta.env.VITE_API_URL}/supplements`)
       .then((response) => setSupplements(response.data))
       .catch((error) => console.error('Error:', error));
   }
