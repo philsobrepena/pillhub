@@ -56,16 +56,24 @@ interface Supplement {
 export function App() {
   const [supplements, setSupplements] = useState<Supplement[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string[]>([])
-
-  useEffect(() => {
-    getSupplements()
-  }, [])
-
   const getSupplements = () => {
     axios.get('http://localhost:3000/supplements')
       .then((response) => setSupplements(response.data))
       .catch((error) => console.error('Error:', error));
   }
+
+
+  // ---without axios:
+  // const getSupplememnts = () => {
+  //   fetch('http://localhost:3000/supplements')
+  //   .then(response => response.json())
+  //   .then(data => setSupplements(data))
+  //   .catch(error => console.error('Error fetching supplements:', error))
+  // }
+
+  useEffect(() => {
+    getSupplements()
+  }, [])
 
   return (
     <>
